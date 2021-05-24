@@ -1,0 +1,29 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 05-24-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   05-24-2021   Vrushabh Uprikar   Initial Version
+-->
+<template> 
+    <lightning-card title="Lightning Web Components: Drag and Drag functionality 
+                                with pub-sub pattern event communication" 
+                icon-name="custom:custom30">
+    <div class="c-container">  
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">   
+                <template if:true={accounts.data}>                
+                    <template for:each={accounts.data} for:item="account">
+                        <!-- use draggable="true" to make div as draggable-->
+                        <div class="column" draggable="true" key={account.Id}
+                            data-item={account.Id} ondragstart={handleDragStart}>
+                            <div class="slds-text-heading_small">{account.Name}</div>
+                        </div>
+                    </template>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    </lightning-card>
+</template>
