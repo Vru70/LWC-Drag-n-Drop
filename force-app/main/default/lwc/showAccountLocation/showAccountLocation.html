@@ -1,0 +1,29 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 05-24-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   05-24-2021   Vrushabh Uprikar   Initial Version
+-->
+<template>
+    <lightning-card title="Lightning Map component will show dropped Company Location" icon-name="custom:custom30">
+        <div class="c-container">
+            <lightning-layout>
+                <lightning-layout-item padding="around-small">
+                    <!-- define dropzone in the div when item will be dropped-->
+                    <div class="dropcls" dropzone="link">
+                        <div class="slds-text-heading_small">{DroppedAccountName}</div>
+                        <lightning-map map-markers={mapMarkers} markers-title={DroppedAccountName}
+                            zoom-level={zoomLevel} center={center}>
+                        </lightning-map>
+                        <p>
+                            <lightning-formatted-text value="|--Drop the dragged account here --|">
+                            </lightning-formatted-text>
+                        </p>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>
