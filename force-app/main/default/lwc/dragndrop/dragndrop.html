@@ -1,32 +1,42 @@
 <!--
   @author            : Vrushabh Uprikar
-  @last modified on  : 05-25-2021
+  @last modified on  : 05-26-2021
   @last modified by  : Vrushabh Uprikar
   Modifications Log 
   Ver   Date         Author             Modification
   1.0   05-25-2021   Vrushabh Uprikar   Initial Version
 -->
 <template>
+    
     <lightning-card title="Drag and Drop in Lightning Web Component">
-        <lightning-layout>
-            <div class="slds-p-around_small">
 
-                <div class="slds-text-heading_small">TO-DO Ticket</div>
+        <lightning-layout>
+
+            <div class="slds-p-around_small">
+                <div class="slds-text-heading_small">TO-DO TASK</div>
                 <br />
-                <div class="flex-container">
+
+                <div id="container-flex" class="flex-container">
                     <div id="ToDo2" class="box" draggable="true" ondragstart={drag}>
                         TODO task 1
                     </div>
                 </div>
+
                 <hr />
-                <div class="slds-text-heading_small">COMPLETED Ticket</div>
+
+                <div class="slds-text-heading_small">COMPLETED TASK</div>
                 <br />
-                <div class="flex-container" ondragover={allowDrop} ondrop={drop}>
+
+                <div id="insert" class="flex-container" ondragover={allowDrop} ondrop={drop}>
                     <div id="ToDo1" class="box completed">
                         TODO Task 2
                     </div>
                 </div>
+
             </div>
+
         </lightning-layout>
+
     </lightning-card>
+    
 </template>
