@@ -1,0 +1,23 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 05-26-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   05-26-2021   Vrushabh Uprikar   Initial Version
+-->
+<template>
+    <lightning-card title="COMPLETED TASK LWC">
+        <lightning-layout>
+            <div class="slds-p-around_small">
+                <div id="idCompletedPosts" class="flex-container" ondragover={allowDrop} ondrop={drop}>
+                    <template for:each={lstPosts} for:item="post">
+                        <p key={post}>
+                            <c-task title={post}></c-task>
+                        </p>
+                    </template>
+                </div>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>

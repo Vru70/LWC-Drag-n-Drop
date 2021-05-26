@@ -1,0 +1,6 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 463px;
+    height: 154.5px;
+}
