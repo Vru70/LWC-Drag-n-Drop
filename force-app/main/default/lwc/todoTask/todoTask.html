@@ -1,0 +1,29 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 05-26-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   05-26-2021   Vrushabh Uprikar   Initial Version
+-->
+<template>
+    <lightning-card title="TO-DO TASK LWC">
+        <lightning-layout>
+            <div class="slds-p-around_small">
+                <div class="flex-container">
+                    <div id="ToDo2" class="box" draggable="true" ondragstart={drag}>
+                        TODO TASK 2
+                    </div>
+
+                    <div id="ToDo3" class="box" draggable="true" ondragstart={drag}>
+                        TODO TASK 3
+                    </div>
+
+                    <div id="ToDo4" class="box" draggable="true" ondragstart={drag}>
+                        TODO TASK 4
+                    </div>
+                </div>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>
