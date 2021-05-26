@@ -5,3 +5,4 @@ This repo includes examples of LWC Drag and Drop
 
 2) In this implementation, we will create a section to display the list of To-Do task in the TO-DO Task section. We will be able to drag and drop the To-Do Task into the COMPLETED Task section. We performing drag and drop operation in SINGLE LWC component [dragndrop (LWC)].
 
+3) Drag and Drop between two different LWC [todoTask, completed, tasl](LWC)
