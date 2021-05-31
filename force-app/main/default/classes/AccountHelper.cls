@@ -1,6 +1,6 @@
 /**
  * @author            : Vrushabh Uprikar
- * @last modified on  : 05-26-2021
+ * @last modified on  : 05-31-2021
  * @last modified by  : Vrushabh Uprikar
  * Modifications Log 
  * Ver   Date         Author             Modification
@@ -15,5 +15,13 @@ public with sharing class AccountHelper
                 BillingState, BillingPostalCode, BillingCountry 
                 FROM Account
                 LIMIT 10];
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getAccountList()
+    {
+        return[SELECT Id, Name, Type, Industry, AnnualRevenue 
+                FROM Account 
+                WHERE Industry!=null and AnnualRevenue!=null];
     }
 }
