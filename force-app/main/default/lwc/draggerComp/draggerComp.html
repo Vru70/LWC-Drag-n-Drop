@@ -1,3 +1,32 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 05-31-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   05-31-2021   Vrushabh Uprikar   Initial Version
+-->
 <template>
-    
+    <lightning-card  title="Drag Accounts">
+        <template if:true={accList.data} for:each={accList.data} for:item="acc">
+           <div class="slds-m-top_medium slds-m-bottom_x-small" key={accList.Id}
+                draggable="true"
+                data-item={accList.Id}
+                ondragstart={handleDragStartEvnt}>
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-tile
+                    label={accList.Name}
+                    type="media"
+                    class="bolder_style">
+                
+                    <lightning-icon 
+                    slot="media" icon-name="standard:account"></lightning-icon>
+                    <p class="slds-truncate" title="7 Members">
+                        Type:{accList.Type}
+                    </p>
+                    </lightning-tile>
+                </div>
+           </div>
+        </template>
+    </lightning-card>
 </template>
