@@ -1,3 +1,19 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 06-01-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   06-01-2021   Vrushabh Uprikar   Initial Version
+-->
 <template>
-    
+    <lightning-card   title="Drap Account" icon-name="standard:account"
+                    ondrop={dropAction} ondragover={allowDrop} >
+        <lightning-record-form
+                    if:true={accountId}
+                    record-id={accountId}
+                    fields={firlds}
+                    object-api-name="Account">
+        </lightning-record-form>
+    </lightning-card>
 </template>
