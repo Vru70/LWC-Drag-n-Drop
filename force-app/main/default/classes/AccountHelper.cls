@@ -1,6 +1,6 @@
 /**
  * @author            : Vrushabh Uprikar
- * @last modified on  : 05-31-2021
+ * @last modified on  : 06-01-2021
  * @last modified by  : Vrushabh Uprikar
  * Modifications Log 
  * Ver   Date         Author             Modification
@@ -22,6 +22,7 @@ public with sharing class AccountHelper
     {
         return[SELECT Id, Name, Type, Industry, AnnualRevenue 
                 FROM Account 
-                WHERE Industry!=null and AnnualRevenue!=null];
+                WHERE Industry!=null and AnnualRevenue!=null
+                LIMIT 5];
     }
 }
