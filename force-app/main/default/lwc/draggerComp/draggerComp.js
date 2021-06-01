@@ -1,6 +1,6 @@
 /**
  * @author            : Vrushabh Uprikar
- * @last modified on  : 05-31-2021
+ * @last modified on  : 06-01-2021
  * @last modified by  : Vrushabh Uprikar
  * Modifications Log 
  * Ver   Date         Author             Modification
@@ -14,7 +14,11 @@ export default class DraggerComp extends LightningElement
     handleDragStartEvnt(event)
     {
         event.dataTransfer.setData("accountId", event.target.dataset.item);
-
     }
+    connectedCallback()
+    {
+        console.log('accList:', JSON.stringify(this.accList));
+    }
+    
 
 }

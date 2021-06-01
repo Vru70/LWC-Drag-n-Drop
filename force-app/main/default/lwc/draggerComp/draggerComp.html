@@ -1,6 +1,6 @@
 <!--
   @author            : Vrushabh Uprikar
-  @last modified on  : 05-31-2021
+  @last modified on  : 06-01-2021
   @last modified by  : Vrushabh Uprikar
   Modifications Log 
   Ver   Date         Author             Modification
@@ -9,20 +9,20 @@
 <template>
     <lightning-card  title="Drag Accounts">
         <template if:true={accList.data} for:each={accList.data} for:item="acc">
-           <div class="slds-m-top_medium slds-m-bottom_x-small" key={accList.Id}
+           <div class="slds-m-top_medium slds-m-bottom_x-small" key={acc.Id}
                 draggable="true"
-                data-item={accList.Id}
+                data-item={acc.Id}
                 ondragstart={handleDragStartEvnt}>
                 <div class="slds-p-around_medium lgc-bg">
                     <lightning-tile
-                    label={accList.Name}
+                    label={acc.Name}
                     type="media"
                     class="bolder_style">
                 
                     <lightning-icon 
                     slot="media" icon-name="standard:account"></lightning-icon>
                     <p class="slds-truncate" title="7 Members">
-                        Type:{accList.Type}
+                        Type:{acc.Type}
                     </p>
                     </lightning-tile>
                 </div>
